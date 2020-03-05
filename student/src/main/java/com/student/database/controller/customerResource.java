@@ -1,4 +1,4 @@
-package com.student.database.api;
+package com.student.database.controller;
 
 import com.student.database.model.Customer;
 import com.student.database.service.CustomerServiceImpl;
