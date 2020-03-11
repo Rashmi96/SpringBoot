@@ -10,9 +10,9 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int empid;
-    String empFirstName;
-    String empLastName;
+    private int empid;
+    private String empFirstName;
+    private String empLastName;
 
     public int getEmpid() {
         return empid;

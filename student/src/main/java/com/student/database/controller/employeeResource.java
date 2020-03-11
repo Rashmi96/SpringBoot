@@ -14,27 +14,27 @@ public class employeeResource {
     @Autowired
     private EmployeeService employeeService;
 
-    @PostMapping("/employee")
+    @PostMapping
     public Employee saveEmployees(@RequestBody Employee employee){
         return employeeService.save(employee);
     }
 
-    @GetMapping("/employee")
+    @GetMapping
     public Iterable<Employee> getEmployees(){
         return employeeService.findAll();
     }
 
-    @GetMapping("/employee/{empid}")
+    @GetMapping("/{empid}")
     Optional<Employee> getEmployees(@PathVariable Integer empid){
         return employeeService.findById(empid);
     }
 
-    @PutMapping("/employee/{empid}")
+    @PutMapping("/{empid}")
     public Employee updateEmployee(@PathVariable int empid,@RequestBody Employee employee){
         employee.setEmpid(empid);
         return employeeService.save(employee);
     }
-    @DeleteMapping("/employee/{empid}")
+    @DeleteMapping("/{empid}")
     public void deleteEmployee(@PathVariable int empid){
         employeeService.deleteById(empid);
     }
